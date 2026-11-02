@@ -13,11 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Archiso in Docker
-        uses: animateuil/archiso-action@v2
-        with:
-          profile-directory: 'archiso'
-          output-directory: 'out'
+      - name: Build IncelOS ISO inside Official Arch Linux Container
+        run: |
+          docker run --privileged --rm -v "$(pwd):/workspace" -w /workspace archlinux:latest bash -c "
+            pacman -Syu --noconfirm &&
+            pacman -S --noconfirm archiso &&
+            mkdir -p out &&
+            mkarchiso -v -w /tmp/archiso-work -o out archiso
+          "
 
       - name: Calculate Checksums
         run: |

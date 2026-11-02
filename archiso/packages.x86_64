@@ -19,7 +19,6 @@ fastfetch
 # Display Server & Wayland
 wayland
 plasma-meta
-plasma-wayland-session
 sddm
 sddm-kcm
 egl-wayland
@@ -59,9 +58,6 @@ noto-fonts-cjk
 ttf-dejavu
 ttf-liberation
 
-# Flatpak & AUR Helper
+# Flatpak & Python GUI
 flatpak
 python-pyside6
-
-# Installer
-calamares
