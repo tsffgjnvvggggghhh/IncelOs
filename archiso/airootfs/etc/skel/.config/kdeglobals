@@ -1,0 +1,11 @@
+[General]
+ColorScheme=BreezeDark
+AccentColor=#8b5cf6
+Name=IncelOS Dark
+
+[KDE]
+ShowDeleteCommand=false
+widgetStyle=Breeze
+
+[Icons]
+Theme=breeze-dark

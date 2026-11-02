@@ -1,0 +1,35 @@
+name: Build IncelOS ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Archiso in Docker
+        uses: animateuil/archiso-action@v2
+        with:
+          profile-directory: 'archiso'
+          output-directory: 'out'
+
+      - name: Calculate Checksums
+        run: |
+          cd out
+          sha256sum *.iso > sha256sums.txt
+
+      - name: Release IncelOS ISO
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            out/*.iso
+            out/sha256sums.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

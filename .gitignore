@@ -1,0 +1,8 @@
+out/
+*.iso
+*.iso.sha256
+*.work/
+__pycache__/
+*.pyc
+.env
+.cache/

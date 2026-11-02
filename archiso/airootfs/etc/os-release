@@ -1,0 +1,12 @@
+NAME="IncelOS"
+PRETTY_NAME="IncelOS Linux"
+ID=incelos
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;139;92;246"
+HOME_URL="https://github.com/incelos/incelos"
+DOCUMENTATION_URL="https://github.com/incelos/incelos/wiki"
+SUPPORT_URL="https://github.com/incelos/incelos/issues"
+BUG_REPORT_URL="https://github.com/incelos/incelos/issues"
+PRIVACY_POLICY_URL="https://github.com/incelos/incelos"
+LOGO=incelos-logo

@@ -1,0 +1,67 @@
+# Base System
+base
+base-devel
+linux-zen
+linux-zen-headers
+linux-firmware
+btrfs-progs
+zram-generator
+snapper
+grub
+efibootmgr
+sudo
+networkmanager
+git
+curl
+wget
+fastfetch
+
+# Display Server & Wayland
+wayland
+plasma-meta
+plasma-wayland-session
+sddm
+sddm-kcm
+egl-wayland
+qt6-wayland
+xdg-desktop-portal-kde
+
+# Audio Stack (PipeWire)
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
+wireplumber
+
+# Hardware & Graphics
+mesa
+vulkan-radeon
+vulkan-intel
+nvidia-dkms
+nvidia-utils
+lib32-nvidia-utils
+lib32-mesa
+lib32-vulkan-radeon
+lib32-vulkan-intel
+
+# Desktop Experience & Theming
+dolphin
+konsole
+ark
+kate
+spectacle
+gwenview
+kde-gtk-config
+breeze-gtk
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
+ttf-dejavu
+ttf-liberation
+
+# Flatpak & AUR Helper
+flatpak
+python-pyside6
+
+# Installer
+calamares

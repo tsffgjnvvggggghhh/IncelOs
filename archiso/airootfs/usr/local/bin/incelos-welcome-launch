@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# IncelOS OOBE Kiosk Launcher
+# Launches the fullscreen minimal motion OOBE wizard
+
+export DISPLAY=:0
+xhost +si:localuser:root || true
+
+# Launch in kiosk mode using chromium, epiphany or cage
+if command -v cage &>/dev/null; then
+    cage -- chromium --kiosk --app=file:///usr/share/incelos/oobe/index.html
+elif command -v chromium &>/dev/null; then
+    chromium --kiosk --incognito --no-first-run --app=file:///usr/share/incelos/oobe/index.html
+elif command -v firefox &>/dev/null; then
+    firefox --kiosk file:///usr/share/incelos/oobe/index.html
+else
+    python3 /usr/local/bin/incelos-welcome
+fi

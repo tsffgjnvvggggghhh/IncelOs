@@ -1,0 +1,9 @@
+[Plugins]
+blurEnabled=true
+contrastEnabled=true
+slideEnabled=true
+fadedesktopEnabled=true
+
+[Windows]
+BorderlessMaximizedWindows=true
+TitlebarFont=Inter,10,-1,5,50,0,0,0,0,0

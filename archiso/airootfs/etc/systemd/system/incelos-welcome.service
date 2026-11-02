@@ -1,0 +1,14 @@
+[Unit]
+Description=IncelOS First-Run Experience (OOBE)
+After=network.target sddm.service
+ConditionPathExists=!/etc/incelos/setup_completed
+
+[Service]
+Type=simple
+User=root
+Environment=DISPLAY=:0
+ExecStart=/usr/local/bin/incelos-welcome-launch
+Restart=no
+
+[Install]
+WantedBy=graphical.target
