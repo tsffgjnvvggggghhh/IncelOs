@@ -24,6 +24,14 @@ jobs:
           cd out
           sha256sum *.iso > sha256sums.txt
 
+      - name: Upload ISO Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IncelOS-x86_64-ISO
+          path: |
+            out/*.iso
+            out/sha256sums.txt
+
       - name: Release IncelOS ISO
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
