@@ -16,10 +16,7 @@ jobs:
       - name: Build IncelOS ISO inside Official Arch Linux Container
         run: |
           docker run --privileged --rm -v "$(pwd):/workspace" -w /workspace archlinux:latest bash -c "
-            pacman -Syu --noconfirm &&
-            pacman -S --noconfirm archiso &&
-            mkdir -p out &&
-            mkarchiso -v -w /tmp/archiso-work -o out archiso
+            bash scripts/build-iso.sh
           "
 
       - name: Calculate Checksums
